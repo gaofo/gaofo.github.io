@@ -32,13 +32,16 @@ function internal_link() {
     var urlArray = window.location.href.split('#');
     if (urlArray.length == 2 && urlArray[1] != "") {
         switch (urlArray[1]) {
-            case "intro":        $('#tab-1-content').show(); break;
-            case "news":         $('#tab-2-content').show(); break;
-            case "publications": $('#tab-3-content').show(); break;
-            case "courses":      $('#tab-4-content').show(); break;
-            case "awards":       $('#tab-5-content').show(); break;
-            case "service":      $('#tab-6-content').show(); break;
-            case "contact":      $('#tab-9-content').show(); break;
+            case "intro":        $('#tab-intro-content').show(); break;
+            case "news":         $('#tab-news-content').show(); break;
+            case "publications": $('#tab-publications-content').show(); break;
+            case "awards":       $('#tab-awards-content').show(); break;
+            case "courses":      $('#tab-courses-content').show(); break;
+            case "systems":      $('#tab-systems-content').show(); break;
+            case "links":        $('#tab-links-content').show(); break;
+            case "service":      $('#tab-service-content').show(); break;
+            case "advising":     $('#tab-advising-content').show(); break;
+            case "contact":      $('#tab-contact-content').show(); break;
             default: break;
         }
     }
@@ -100,3 +103,32 @@ jQuery(document).ready(function($) {
  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-70658068-1', 'auto');
 ga('send', 'pageview');
+
+
+// Check if HTTPS website is available. If yes, then load it.
+//////////////////////////////////////////////////////////////
+/*var sslpage = "https:" + window.location.href.substring(window.location.protocol.length);
+var request;
+
+// Redirect to SSL (if available on server)
+if (window.location.protocol != "https:") {
+    
+    if(window.XMLHttpRequest) {
+        request = new XMLHttpRequest();
+    }
+    else {
+        request = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    alert(sslpage);
+    request.open('GET', sslpage, false);
+    request.send(); // there will be a 'pause' here until the response to come.
+    // the object request is HTTP 200
+    alert("HI");
+    if (request.status === 200) {
+      window.location.href = sslpage;
+    }
+}*/
+ if (window.location.protocol != "https:")
+   window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+//////////////////////////////////////////////////////////////
+
