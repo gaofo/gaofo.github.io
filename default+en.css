@@ -64,6 +64,7 @@ td.gsc-clear-button {
 .gsc-branding,
 .gcsc-branding {
   display: flex;
+  justify-content: flex-end;
 }
 
 .gsc-branding-text,
