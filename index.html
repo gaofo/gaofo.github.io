@@ -10,79 +10,6 @@
   		gtag('js', new Date());
   		gtag('config', 'UA-137364894-1');
 	</script>
-    
-    <script language="JavaScript">
-<!--
-    function spiderjam(mym, myd){
-        document.write("<a href=mailto:"	+ mym + "&#64;" + myd + ">" + mym + "&#64;" + myd + "</a>");
-    }
-
-    function firefox() {
-        var browser=navigator.userAgent.toLowerCase();
-        if(browser.indexOf('firefox') > -1) {
-            $('#bs-example-navbar-collapse-2').toggle();
-        }
-    }
-
-    function reset_menus() {
-        sizing($(window).width());
-    }
-
-    <!-- Take action if the request on URI has internal link '#' -->
-    function internal_link() {
-        var urlArray = window.location.href.split('#');
-        if (urlArray.length == 2 && urlArray[1] != "") {
-            switch (urlArray[1]) {
-                case "home":        $('#tab-home-content').show(); break;
-                case "news": $('#tab-news-content').show(); break;
-                case "publications":      $('#tab-publications-content').show(); break;
-                case "projects":      $('#tab-projects-content').show(); break;
-				case "awards":      $('#tab-awards-content').show(); break;
-				case "students":      $('#tab-students-content').show(); break;
-				case "talks":      $('#tab-talks-content').show(); break;
-				case "service":      $('#tab-service-content').show(); break;
-                default: break;
-            }
-        }
-    }
-
-    function sizing(windowWidth) {
-        //alert(windowWidth);
-        if(windowWidth < 1024){ // desktop size
-            $('.twittertop').hide();
-            $('.twitterlow').show();
-        } else {
-            $('.twittertop').show();
-            $('.twitterlow').hide();
-        }
-
-        if(windowWidth <= 480){ // ipad:768, Nexus10:800, 480
-            $('.allshow').hide(); //
-            $('.noshow').show();
-            $('.expandshow').show();
-            $('.collapseshow').hide();
-        } else {
-            $('.allshow').show();
-            $('.noshow').hide();
-            $('.expandshow').hide();
-            $('.collapseshow').hide();
-        }
-    }
-
-    jQuery(document).ready(function($) {
-        var windowWidth = $(window).width();
-        $(window).resize(function(){
-            // Check window width has actually changed and it's not just iOS triggering a resize event on scroll
-            if ($(window).width() != windowWidth) {
-                windowWidth = $(window).width();
-                sizing(windowWidth);
-            }
-        });
-        sizing(windowWidth);
-        internal_link();
-    });
-//-->
-</script>
 	    
 	
         <title>Fei Hao | Homepage</title>
@@ -308,30 +235,9 @@
                     
                 </div>
                 
-                <!--<i class="twittertop" style="display:none;" id="t1">
-                    <div id="news" tyle="text-align: left"  class="col-md-5">&nbsp;
-                        <center><a class="twitter-timeline" href="https://twitter.com/dmslucy" data-chrome="nofooter" data-widget-id="346662554203992065" data-width="900"
-                            data-height="300">Tweets
-                            by @dmslucy</a>
-                        <script>!function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + "://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");</script></center>
-                    </div>
-                </i>-->
+              
                 
-                <!--<p><a href="#" class="btn btn-primary">More &raquo;</a></p>-->
-                <!-- <b class="expandshow" style="display:none;" id="tab-1">
-                    <button class="btn btn-primary btn-lg btn-block" style="width: 100%;" onclick="javascript:$('.allshow').show();$('.noshow').hide();$('.collapseshow').show();$('.expandshow').hide();">EXPAND ALL SECTIONS <span class="glyphicon glyphicon-chevron-down"></span></button>
-                </b>
-                <b class="collapseshow" style="display:none;" id="tab-1">
-                    <button class="btn btn-primary btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('.allshow').hide();$('.noshow').show();$('.expandshow').show();$('.collapseshow').hide();">COLLAPSE ALL SECTIONS <span class="glyphicon glyphicon-chevron-up"></span></button>
-                </b> -->
+                
                 
             </div>
         </section>
@@ -339,7 +245,7 @@
         <!-- Home Section -->
         <section name="intro" id="intro">
             <div class="container lead">
-                <div style="text-align: justify; margin-top:1px; font-size:18px;" class="col-md-12">
+                <div style="text-align: justify; margin-top:10px; font-size:18px;" class="col-md-12">
                     <!--<h2>Welcome!</h2>-->
                     
                     <!--<b class="noshow" style="display:none;" id="tab-1">
@@ -360,6 +266,13 @@
                         </p>
                         <p class="lead; font-size:18px;">&nbsp;</p>
                 </div>
+				<!--<p><a href="#" class="btn btn-primary">More &raquo;</a></p>-->
+        <i class="expandshow" style="display:none;" id="tab-1">
+            <button class="btn btn-primary btn-lg btn-block" style="width: 100%;" onclick="javascript:$(&#39;.allshow&#39;).show();$(&#39;.noshow&#39;).hide();$(&#39;.collapseshow&#39;).show();$(&#39;.expandshow&#39;).hide();">EXPAND ALL SECTIONS <span class="glyphicon glyphicon-chevron-down"></span></button>
+        </i>
+        <i class="collapseshow" style="display:none;" id="tab-1">
+            <button class="btn btn-primary btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$(&#39;.allshow&#39;).hide();$(&#39;.noshow&#39;).show();$(&#39;.expandshow&#39;).show();$(&#39;.collapseshow&#39;).hide();">COLLAPSE ALL SECTIONS <span class="glyphicon glyphicon-chevron-up"></span></button>
+        </i>
                 </div>
             
         </section>
@@ -367,7 +280,7 @@
 		<!-- News Section -->
          <section name="news" id="news">
              <div class="container lead">
-                 <div style="text-align: left; margin-top:1px; font-size:18px;" class="col-md-12">
+                 <div style="text-align: left; margin-top:10px; font-size:18px;" class="col-md-12">
                      
                      <!--<b class="noshow" style="display:none;" id="tab-6">
                          <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-awards-content').toggle();">Awards  <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -412,43 +325,12 @@
              
          </section>
 		
-        <!-- News Section -->
-        <!-- <div class="twitterlow" style="display:none;" id="t1">
-            <section  name="news"  id="news">
-                <div class="container lead">
-                    <div style="text-align: left; margin-top:10px" class="col-md-12">
-                        
-                        <b class="noshow" style="display:none;" id="tab-2">
-                            <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-news-content').toggle();">News  <span class="glyphicon glyphicon-chevron-down"></span></button>
-                        </b>
-                        <b class="allshow" style="display:none;" id="tab-news-content">
-                            
-                            <hr class="star-primary">
-                            
-                            <h2>News</h2>
-                            <center><a class="twitter-timeline" href="https://twitter.com/dmslucy" data-chrome="nofooter" data-widget-id="346662554203992065">Tweets
-                                by @dmslcy</a>
-                            <script>!function (d, s, id) {
-                                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-                                if (!d.getElementById(id)) {
-                                    js = d.createElement(s);
-                                    js.id = id;
-                                    js.src = p + "://platform.twitter.com/widgets.js";
-                                    fjs.parentNode.insertBefore(js, fjs);
-                                }
-                            }(document, "script", "twitter-wjs");
-                            </script>
-                            </center>
-                        </b>
-                    </div>
-                </div>
-            </section>
-        </div> -->
+       
         
         <!-- Research Section -->
         <section name="publications" id="publications">
             <div class="container lead">
-                <div style="text-align: justify; margin-top:1px ; font-size:18px;" class="col-md-16">
+                <div style="text-align: justify; margin-top:10px ; font-size:18px;" class="col-md-16">
                     
                     <!--<b class="noshow" style="display:none;" id="tab-3">
                         <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-publications-content').toggle();">Publications  <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -652,7 +534,7 @@ with Influence Maximization Mechanism"</a><br>
            
  <section name="projects" id="projects">
              <div class="container lead">
-               <div style="text-align: left; margin-top:1px ; font-size:18px;" class="col-md-12">
+               <div style="text-align: left; margin-top:10px ; font-size:18px;" class="col-md-12">
                      
                      <!--<b class="noshow" style="display:none;" id="tab-6">
                          <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-awards-content').toggle();">Awards  <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -689,7 +571,7 @@ with Influence Maximization Mechanism"</a><br>
          <!-- Awards Section -->
          <section name="awards" id="awards">
              <div class="container lead">
-                 <div style="text-align: left; margin-top:1px ; font-size:18px;" class="col-md-12">
+                 <div style="text-align: left; margin-top:10px ; font-size:18px;" class="col-md-12">
                      
                      <!--<b class="noshow" style="display:none;" id="tab-6">
                          <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-awards-content').toggle();">Awards  <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -758,7 +640,7 @@ with Influence Maximization Mechanism"</a><br>
          </section>
 <section name="students" id="students">
              <div class="container lead">
-               <div style="text-align: left; margin-top:1px ; font-size:18px;" class="col-md-12">
+               <div style="text-align: left; margin-top:10px ; font-size:18px;" class="col-md-12">
                      
                      <!--<b class="noshow" style="display:none;" id="tab-6">
                          <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-awards-content').toggle();">Awards  <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -783,7 +665,7 @@ with Influence Maximization Mechanism"</a><br>
  </section>
 <section name="talks" id="talks">
              <div class="container lead">
-               <div style="text-align: left; margin-top:1px ; font-size:18px;" class="col-md-12">
+               <div style="text-align: left; margin-top:10px ; font-size:18px;" class="col-md-12">
                      
                      <!--<b class="noshow" style="display:none;" id="tab-6">
                          <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-awards-content').toggle();">Awards  <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -887,7 +769,7 @@ with Influence Maximization Mechanism"</a><br>
         <!-- Service Section -->
         <section name="service" id="service">
             <div class="container lead">
-                <div style="text-align: justify; margin-top:1px ; font-size:18px;" class="col-md-12">
+                <div style="text-align: justify; margin-top:10px ; font-size:18px;" class="col-md-12">
                     
                     <!--<b class="noshow" style="display:none;" id="tab-7">
                         <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-service-content').toggle();">Service  <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -1038,8 +920,11 @@ Communications (GreenCom 2019)
                 </div>
             </div>
         </section>
+		
+		
+
         
-        <!-- Home Section -->
+        <!-- Footer Section -->
         <footer>
             <small>
                 <center>
